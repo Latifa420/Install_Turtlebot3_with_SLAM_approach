@@ -67,3 +67,23 @@ Modify the address of localhost in the ROS_MASTER_URI and ROS_HOSTNAME with the 
 4. Source the bashrc with below command.
 
 $ source ~/.bashrc
+
+Navigation:
+
+Run Navigation Nodes
+1. If roscore is not running on the Remote PC, run roscore. Skip this step if roscore is already running.
+
+$ roscore
+
+2. If the Bringup is not running on the TurtleBot3 SBC, launch the Bringup. Skip this step if you have launched bringup previously.
+Open a new terminal from Remote PC with Ctrl + Alt + T and connect to Raspberry Pi with its IP address. The default password is turtlebot. Please use the proper keyword among burger, waffle, waffle_pi for the TURTLEBOT3_MODEL parameter.
+
+$ ssh ubuntu@{IP_ADDRESS_OF_RASPBERRY_PI}
+$ export TURTLEBOT3_MODEL=${TB3_MODEL}
+$ roslaunch turtlebot3_bringup turtlebot3_robot.launch
+
+3. Launch the Navigation.
+Please use the proper keyword among burger, waffle, waffle_pi for the TURTLEBOT3_MODEL parameter.
+
+$ export TURTLEBOT3_MODEL=burger
+$ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map.yaml
