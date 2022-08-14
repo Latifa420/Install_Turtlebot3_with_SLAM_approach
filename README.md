@@ -15,9 +15,13 @@ Open the terminal with Ctrl+Alt+T and enter below commands one at a time.
 In order to check the details of the easy installation script, please refer to the script file (https://raw.githubusercontent.com/ROBOTIS-GIT/robotis_tools/master/install_ros_noetic.sh)
 
 $ sudo apt update
+
 $ sudo apt upgrade
+
 $ wget https://raw.githubusercontent.com/ROBOTIS-GIT/robotis_tools/master/install_ros_noetic.sh
+
 $ chmod 755 ./install_ros_noetic.sh 
+
 $ bash ./install_ros_noetic.sh
 
 If the above installation fails, please refer to the official ROS1 Noetic installation guide (http://wiki.ros.org/noetic/Installation/Ubuntu)
@@ -41,13 +45,15 @@ $ sudo apt install ros-noetic-turtlebot3-msgs
 $ sudo apt install ros-noetic-turtlebot3
 
 5) Network Configuration
-https://emanual.robotis.com/assets/images/platform/turtlebot3/software/network_configuration.png 
-https://emanual.robotis.com/assets/images/platform/turtlebot3/software/network_configuration.png
+
+![image](https://user-images.githubusercontent.com/86505558/184559434-6d95c292-83e8-4e35-a92a-954491e7ac0d.png)
+
 
 1. Connect PC to a WiFi device and find the assigned IP address with the command below.
  
 $ ifconfig
-https://emanual.robotis.com/assets/images/platform/turtlebot3/software/network_configuration2.png
+
+![image](https://user-images.githubusercontent.com/86505558/184559458-041cb658-cf84-42b9-807e-ffae656571cc.png)
 
 2. Open the file and update the ROS IP settings with the command below.
 
@@ -56,7 +62,7 @@ $ nano ~/.bashrc
 3. Press Ctrl+END or Alt+/ to move the cursor to the end of line.
 Modify the address of localhost in the ROS_MASTER_URI and ROS_HOSTNAME with the IP address acquired from the above terminal window.
 
-https://emanual.robotis.com/assets/images/platform/turtlebot3/software/network_configuration3.png
+![image](https://user-images.githubusercontent.com/86505558/184559465-ca30660f-204b-4ca3-ad7e-702b710bdff9.png)
 
 4. Source the bashrc with below command.
 
