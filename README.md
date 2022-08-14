@@ -41,7 +41,9 @@ $ sudo apt-get install ros-noetic-joy ros-noetic-teleop-twist-joy \
 Install TurtleBot3 via Debian Packages.
 
 $ sudo apt install ros-noetic-dynamixel-sdk
+
 $ sudo apt install ros-noetic-turtlebot3-msgs
+
 $ sudo apt install ros-noetic-turtlebot3
 
 5) Network Configuration
@@ -79,11 +81,14 @@ $ roscore
 Open a new terminal from Remote PC with Ctrl + Alt + T and connect to Raspberry Pi with its IP address. The default password is turtlebot. Please use the proper keyword among burger, waffle, waffle_pi for the TURTLEBOT3_MODEL parameter.
 
 $ ssh ubuntu@{IP_ADDRESS_OF_RASPBERRY_PI}
+
 $ export TURTLEBOT3_MODEL=${TB3_MODEL}
+
 $ roslaunch turtlebot3_bringup turtlebot3_robot.launch
 
 3. Launch the Navigation.
 Please use the proper keyword among burger, waffle, waffle_pi for the TURTLEBOT3_MODEL parameter.
 
 $ export TURTLEBOT3_MODEL=burger
+
 $ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map.yaml
